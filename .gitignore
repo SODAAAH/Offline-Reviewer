@@ -22,6 +22,11 @@ node_modules/
 dist/
 .kotlin/
 
+# Agent and tooling configs
+.agents/
+docs/
+RELEASE_NOTES.md
+
 # Other project files
 /src/
 /public/
