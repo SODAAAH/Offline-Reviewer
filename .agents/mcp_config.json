@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "context7": {
+      "serverUrl": "https://mcp.context7.com/mcp/oauth"
+    },
+    "android": {
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "android-mcp-server"
+      ],
+      "env": {
+        "ANDROID_HOME": "C:\\Users\\jahnm\\AppData\\Local\\Android\\Sdk"
+      }
+    }
+  }
+}
