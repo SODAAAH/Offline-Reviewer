@@ -73,4 +73,17 @@ class AppFoundationTest {
         assertEquals(1, flashcard.intervalDays)
         assertEquals(0, flashcard.repetitionNumber)
     }
+
+    @Test
+    fun appDatabaseImpl_existsAndInheritsFromAppDatabase() {
+        val implClass = Class.forName("com.studentreviewer.offline.data.database.AppDatabase_Impl")
+        assertNotNull(implClass)
+        assertEquals(com.studentreviewer.offline.data.database.AppDatabase::class.java, implClass.superclass)
+        assertNotNull(implClass.getMethod("subjectDao"))
+        assertNotNull(implClass.getMethod("materialDao"))
+        assertNotNull(implClass.getMethod("reviewSetDao"))
+        assertNotNull(implClass.getMethod("questionDao"))
+        assertNotNull(implClass.getMethod("studyDao"))
+        assertNotNull(implClass.getMethod("examDao"))
+    }
 }

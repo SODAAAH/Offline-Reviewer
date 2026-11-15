@@ -2,6 +2,7 @@ plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.compose.compiler)
   alias(libs.plugins.kotlin.serialization)
+  alias(libs.plugins.ksp)
 }
 
 android {
@@ -78,6 +79,6 @@ dependencies {
 
   implementation(libs.androidx.room.runtime)
   implementation(libs.androidx.room.ktx)
-  annotationProcessor(libs.androidx.room.compiler)
+  ksp(libs.androidx.room.compiler)
   implementation(libs.androidx.datastore.preferences)
 }
